@@ -1,9 +1,7 @@
 name: Hola Mundo
+
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  - push
 
 jobs:
   hola:
@@ -11,3 +9,9 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo"
+
+  other:
+    runs-on: ubuntu-latest
+    steps:
+      - name: LS
+        run: ls -al
